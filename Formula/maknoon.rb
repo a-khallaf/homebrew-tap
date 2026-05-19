@@ -5,13 +5,13 @@
 class Maknoon < Formula
   desc "Premier Post-Quantum Security Suite: Hybrid HPKE (ML-KEM + X25519) encryption."
   homepage "https://github.com/al-Zamakhshari/maknoon"
-  version "1.3.121"
+  version "1.3.122"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.121/maknoon_1.3.121_darwin_amd64.tar.gz"
-      sha256 "6ada7465c8db089d7c677bf0d8e21a6cabeb233b8b5b53a628ea7106cb134907"
+      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.122/maknoon_1.3.122_darwin_amd64.tar.gz"
+      sha256 "b7ec7053b4595d74cf1114100313fbd6cd182d357fa1194d9d7f76dfd9c1462d"
 
       define_method(:install) do
         bin.install "maknoon"
@@ -19,8 +19,8 @@ class Maknoon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.121/maknoon_1.3.121_darwin_arm64.tar.gz"
-      sha256 "871800efb669853938cb311c4664ef21e9597078caccac1b0c9b6c33e385fe55"
+      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.122/maknoon_1.3.122_darwin_arm64.tar.gz"
+      sha256 "6f08a7e9ddbbef175518e6fc205c274bc1b4b5f5845304021f3c687492ecf59e"
 
       define_method(:install) do
         bin.install "maknoon"
@@ -31,16 +31,16 @@ class Maknoon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.121/maknoon_1.3.121_linux_amd64.tar.gz"
-      sha256 "4c9b6d287c5dfa7971f25feca0b5e7a89b8ff96f2673feb9c360c26a53a436e3"
+      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.122/maknoon_1.3.122_linux_amd64.tar.gz"
+      sha256 "3274a91648ef7994b3f2484d21c281d7778f6e13cdddb2ce156669210905a3ec"
       define_method(:install) do
         bin.install "maknoon"
         man1.install Dir["man/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.121/maknoon_1.3.121_linux_arm64.tar.gz"
-      sha256 "dec0b790a7e28620060dc829a481c79a9a046154942c1057a3bc98ca9a27258d"
+      url "https://github.com/al-Zamakhshari/maknoon/releases/download/v1.3.122/maknoon_1.3.122_linux_arm64.tar.gz"
+      sha256 "8f05e2686aa10718e37ae69b4a253912f038bd66c1a329c22d2614a10ac8cfe8"
       define_method(:install) do
         bin.install "maknoon"
         man1.install Dir["man/*.1"]
